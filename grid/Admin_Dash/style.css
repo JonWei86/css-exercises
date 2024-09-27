@@ -1,0 +1,291 @@
+body{
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.5fr 1fr 9fr;
+    grid-template-areas:
+    "sidebar nav"
+    "sidebar header"
+    "sidebar body";
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-area: nav;
+    justify-items: center;
+    padding-top: 1em;
+}
+
+.search{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+.search svg {
+    height: 2em;
+    padding: 0 1em 0 3em;
+}
+
+.search input{
+    height: 2em;
+    width: 60%;
+    border: none;
+    border-radius: 1em;
+    background-color: #eeeeee;
+}
+
+.nav :nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 4fr;
+    background-color: rgb(0, 162, 255);
+    color:white;
+}
+
+.sidebar_header{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.sidebar_header svg{
+    height: 3em;
+    justify-self: flex-end;
+    padding: 0.75em;
+    fill:white;
+}
+
+
+.sidebar div {
+    margin: 0;
+    display: grid;
+    grid-template-columns:1fr 3fr;
+}
+
+.sidebar h1{
+    margin: 0;
+}
+
+.sidebar ul{
+    list-style: none;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.sidebar li{
+    padding: 0 0 1em 1.5em;
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    align-items: center;
+    font-weight: 600;
+}
+
+.sidebar p{
+    font-size: 1.75em;
+    margin:0;
+}
+
+.sidebar ul svg{
+    height: 2em;
+    padding: 0 1.75em 0 0;
+    fill: white;
+}
+
+.header{
+    display: grid;
+    grid-area: header;
+    background: white;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.header > div{
+    display:flex;
+    flex-direction: row;
+}
+
+.user_greeting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user_icon {
+    height: 4em;
+    clip-path: circle();
+    padding-left: 2em;
+}
+
+.user_nav{
+    display: flex;
+    align-items: center;
+}
+
+.user_nav > p {
+    margin:0;
+}
+
+.nav_svg{
+    height: 2em;
+}
+
+.nav_icon {
+    height:2.5em;
+}
+
+.user_greeting > p {
+    margin:0;
+}
+
+.header_name{
+    font-size: 1.75em;
+}
+
+.buttons{
+    justify-content: end;
+    padding-right: 3em;
+}
+
+.buttons > button {
+    height: 2.5em;
+    width: 6em;
+    font-size: 1em;
+    border-radius: 3em;
+    margin-left: 1em;
+    border: none;
+    color: white;
+    background-color: rgb(0, 162, 255);
+}
+
+.proj_btn{
+    margin: 1em;
+}
+
+.proj_btn >svg{
+    height: 2em;
+}
+
+.body{
+    background: #eeeeee;
+    grid-area: body;
+    display: grid;
+    grid-template-areas:
+    "projects announce"
+    "projects trending"
+    ;
+    grid-template-columns: 3fr 1fr;
+    gap: 1em;
+    padding: 0 2rem 0 1em;
+}
+
+.projects-container{
+    grid-area: projects;
+}
+
+.projects-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.sing_proj{
+    border-radius: 0.6em;
+    background-color: white;
+    padding:  2em 2em 1em 2em;
+    border-left: 0.6em solid rgb(255, 213, 0);
+}
+
+.project_title{
+    margin: 0;
+}
+
+.project_descrip{
+    height: 8em;
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+.project_btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.proj_btn{
+    background-color: white;
+    border: none;
+}
+
+.ann_title{
+    font-weight: bold;
+}
+
+.announce_body{
+    background-color: white;
+    padding: 1.5em 1em 1.75em 1em;
+    border-radius: 0.6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcement{
+    margin: 0.5em 1em 0.5em 1em;
+    border-bottom: 1px solid #c8c7c7;
+}
+
+.ann_title{
+    margin: 0;
+}
+
+.ann_sum{
+    margin: 0 0 1em 0;
+    font-size: 0.8em;
+    color: #686868;
+}
+
+.trends_container{
+    grid-area:trending;
+}
+
+.trends_body{
+    background-color: white;
+    padding: 1em; 
+    border-radius: 0.6em;
+}
+
+.user{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.user_handle{
+    margin: 0;
+}
+
+.proj_title{
+    margin:0;
+}
