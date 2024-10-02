@@ -68,7 +68,7 @@ button.cancel {
   color: royalblue;
 }
 
-.modal{
+/* .modal{
   display: flex;
   padding: 10px;
 }
@@ -80,6 +80,7 @@ button.cancel {
 
 .header{
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-weight: 900;
   font-size: larger;
@@ -95,4 +96,28 @@ button.cancel {
 .buttons{
   display: flex;
   gap: 5px;
+} */
+
+.modal {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.icon {
+  /* this keeps the icon from getting smashed by the text */
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.text {
+  margin-bottom: 16px;
 }
